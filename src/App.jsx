@@ -1,9 +1,10 @@
-import { useState } from "react";
 import "./App.css";
 import "./settings-OF-tailwind.css";
 import Flex from "./components/Flex";
 import CardWrapper from "./components/CardWrapper";
 import Form from "./components/Form";
+import Table from "./components/Table";
+import { useState } from "react";
 
 // data's:
 const cardData = [
@@ -74,27 +75,40 @@ const formha = [
   { label: "خدمت رفته ام ", id: 2 },
   { label: "قوانین را می پذیرم", id: 3 },
 ];
+async function dataMan() {
+  const info = await fetch("https://reqres.in/api/users?page=2");
+  const tabdil = await info.json();
+  // console.log(tabdil);
+}
 //
 
 export default function App() {
-  const [count, setCount] = useState(0);
+  //
+
+  // function stateUpdater(input) {
+  //   function Updater(newInput) {
+  //     return newInput;
+  //   }
+  //   return [input, Updater];
+  // }
+  // const HArch = stateUpdater(true);
+  // console.log(HArch[1]("()="));
+
+  function stateUpdater(input) {
+    function Updater(newInput) {
+      return newInput;
+    }
+    return [input, Updater];
+  }
+  const state = stateUpdater(0);
+  console.log(state[0], state[1]("gerdoo"));
+  const [a, b] = stateUpdater("golabi");
+  console.log(a,b("sa"));
+  console.log(state[1]("goozMaghz"));
+
   return (
     <div>
-      <Flex>
-        
-
-
-
-        {/* 
-      {formha.map((changIz) => {
-        return <Form data2={changIz} />;
-      })}
-
-       */}
-        {/* {cardData.map((wow) => {
-          return <CardWrapper data={wow} />;
-        })} */}
-      </Flex>
+      <Flex></Flex>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 export default function CardWrapper(prop) {
-  console.log(prop);
+
   return (
     <div className="w-[270px] h-[300px] bg-slate-400 rounded-2xl flex flex-col justify-center items-center">
       <div className="h-[150px] w-[200px] flex justify-center bg-gray-800 rounded-3xl">

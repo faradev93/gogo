@@ -55,3 +55,18 @@
         {/* {cardData.map((wow) => {
           return <CardWrapper data={wow} />;
         })} */}
+
+
+
+
+
+
+          function stateUpdater(input) {
+    function Updater(newInput2) {
+      input = newInput2;
+      return newInput2;
+    }
+    return [input, Updater];
+  }
+  const yarn = stateUpdater("golabi");
+  console.log(yarn[1]("New Test Khobi bod"));

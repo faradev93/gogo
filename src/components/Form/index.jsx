@@ -1,4 +1,5 @@
 export default function Form(prop) {
+  console.log(prop);
   const handleChange = (e) => {
     console.log(e.target.checked), console.log(e.target.id);
   };

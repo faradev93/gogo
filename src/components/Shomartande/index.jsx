@@ -1,4 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Checkbox from "../Checkbox";
+import Eventcompo from "../Eventcopmp";
+
+const formha = [
+  { label: "متاهل هستم", id: 1, value: "Married" },
+  { label: "خدمت رفته ام ", id: 2, value: "Military" },
+  { label: "قوانین را می پذیرم", id: 3, value: "AgreeRules" },
+];
 
 export default function Shomarande() {
   const [Beshmar, setBeshamr] = useState(0);
@@ -24,16 +32,16 @@ export default function Shomarande() {
   };
   //
   return (
-    <div className="flex flex-col :hoverfirst-letter:bg-red-500">
-      <div className="bg-indigo-500 w-[640px] h-[640px] rounded-2xl flex gap-6 flex-col justify-center items-center">
+    <div className="bg-linear-to-r from-cyan-500 to-blue-500 flex flex-col :hoverfirst-letter:bg-red-500">
+      <div className="w-[640px] h-[640px] bg-slate-400 rounded-2xl flex gap-6 flex-col justify-center items-center">
         <button
           onClick={Increase}
           className="border-red-600 size-20 shadow-xl font-serif hover:bg-green-500"
         >
           PLUS
         </button>
-        <p className="bg-lime-500 w-20 h-20 rounded-xl flex justify-center items-center text-5xl">
-          {Beshmar}
+        <p className="bg-lime-500 w-40 h-40 rounded-xl flex justify-center items-center text-5xl">
+          {Beshmar === 10 ? <Eventcompo /> : Beshmar}
         </p>
         <button
           onClick={Decrease}

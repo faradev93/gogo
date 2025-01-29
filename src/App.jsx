@@ -4,8 +4,16 @@ import Flex from "./components/Flex";
 import CardWrapper from "./components/CardWrapper";
 import Form from "./components/Form";
 import Table from "./components/Table";
-import { useState } from "react";
+import { Component, useEffect, useState } from "react";
 import Shomarande from "./components/Shomartande";
+import Shomaresh2 from "./components/Shomaresh2";
+import Checkbox from "./components/Checkbox";
+import Greeting from "./components/Greeting";
+import Toggle from "./components/Toggle";
+import Test from "./components/Test";
+import Greeting2 from "./components/Greeting2";
+import Newcounter from "./components/NewCounter";
+import Checkbox2 from "./components/Checkbox2";
 
 // data's:
 const cardData = [
@@ -72,17 +80,26 @@ const cardData = [
 ];
 
 const formha = [
-  { label: "متاهل هستم", id: 1 },
-  { label: "خدمت رفته ام ", id: 2 },
-  { label: "قوانین را می پذیرم", id: 3 },
+  { label: "متاهل هستم", id: 1, value: "Married" },
+  { label: "خدمت رفته ام ", id: 2, value: "Military" },
+  { label: "قوانین را می پذیرم", id: 3, value: "AgreeRules" },
 ];
+const FakeDT = {
+  name: "Jack DAniel",
+  Age: "30",
+  Lang: "EN",
+  Skin: "white",
+};
+
 //
 
 export default function App() {
   return (
     <div>
       <Flex>
-        <Shomarande />
+        <Newcounter/>
+        <Checkbox2/>
+        <Greeting2 name={FakeDT.name} />
       </Flex>
     </div>
   );

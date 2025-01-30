@@ -25,6 +25,7 @@ import Geek_for_geek from "./components/Geek_for_geek";
 import Greet from "./components/Greet";
 import Data_with_card from "./components/Data_with_card";
 import "./public/styles.css";
+import Tailwind_train from "./components/Tailwind_train";
 
 // data's:
 const cardData = [
@@ -108,6 +109,7 @@ export default function App() {
   return (
     <div>
       <Flex>
+        <Tailwind_train/>
         <Data_with_card />
         <Geek_for_geek />
         <Greet />

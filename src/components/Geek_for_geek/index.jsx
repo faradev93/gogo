@@ -24,7 +24,7 @@ export default function Geek_for_geek() {
           <thead>
             جدول فضولی
             <tbody className="bg-red-500">کصشریجات</tbody>
-            <tr>
+            <tr key={user.id}>
               <td>ID</td>
               <td>Name</td>
               <td>Last Name</td>
@@ -32,9 +32,9 @@ export default function Geek_for_geek() {
               <td>Aks</td>
             </tr>
           </thead>
-          {user.map((KGB) => {
+          {user.map((KGB,index) => {
             return (
-              <tr>
+              <tr key={index}>
                 <td>{KGB.id}</td>
                 <td>{KGB.first_name}</td>
                 <td>{KGB.last_name}</td>

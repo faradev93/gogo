@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Test from "../Test";
+import Showmatn from "../Showmatn";
 
 export default function Newcounter() {
   const [count, setCount] = useState(0);
@@ -23,7 +24,7 @@ export default function Newcounter() {
         ++
       </button>
       <h1 className="text-2xl bg-black p-5 m-2 rounded-md h-[50px] text-center flex justify-center items-center text-white font-bold">
-        {count === 15 ? <Test data={"ali"}/> : count}
+        {count === 15 ? <Showmatn /> : count}
       </h1>
       <button
         className="border-red-400 border-2 p-5 hover:bg-red-700 transition duration-[1s]"
@@ -34,7 +35,6 @@ export default function Newcounter() {
       <button className="border-pink-400 border-2 p-2 mt-2" onClick={Reset}>
         RST
       </button>
-      
     </div>
   );
 }

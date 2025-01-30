@@ -14,6 +14,17 @@ import Test from "./components/Test";
 import Greeting2 from "./components/Greeting2";
 import Newcounter from "./components/NewCounter";
 import Checkbox2 from "./components/Checkbox2";
+import Buttontest from "./components/Buttontest";
+import Counter2222 from "./components/Counter2222";
+import Showmatn from "./components/Showmatn";
+import Updater from "./components/Updater";
+import Fetch_Table from "./components/Fetch_table";
+import Fetch from "./components/Fetch";
+import Dataha from "./components/Dataha";
+import Geek_for_geek from "./components/Geek_for_geek";
+import Greet from "./components/Greet";
+import Data_with_card from "./components/Data_with_card";
+import "./public/styles.css";
 
 // data's:
 const cardData = [
@@ -97,9 +108,11 @@ export default function App() {
   return (
     <div>
       <Flex>
-        <Newcounter/>
-        <Checkbox2/>
-        <Greeting2 name={FakeDT.name} />
+        <Data_with_card />
+        <Geek_for_geek />
+        <Greet />
+        <Newcounter />
+        <Updater />
       </Flex>
     </div>
   );
